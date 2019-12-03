@@ -7,7 +7,7 @@
     <center><h1 style="margin:5;">Your Twitter Search</h1></center>
     <div class="jumbotron" style="margin: 40px;">
         <ul>
-            {% for key, value in it.items %}
+            {% for key, value in all_tweets.items %}
             <li>
                 <img src="{{ value.url }}" />
                 <h4>{{ value.user_name }}</h4>
