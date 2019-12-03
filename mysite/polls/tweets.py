@@ -1,9 +1,13 @@
 import twitter
 import tkinter
-from tweet import Tweet
+from .tweet import Tweet
 import datetime
 import json
 
+"""
+Function to get tweets from twitter
+Returns them in a tweets dict
+"""
 def get_tweets(search_string, result_type, time_range):
 
     api = twitter.Api(consumer_key='7SVoyHlwYgm90Y5HSzmTzUQ9O',
@@ -27,6 +31,3 @@ def get_tweets(search_string, result_type, time_range):
         i += 1
 
     return tweets
-
-if __name__ == '__main__':
-    get_tweets("trump", "recent", datetime.date(2019, 11, 3))
